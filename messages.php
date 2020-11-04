@@ -1,8 +1,8 @@
 <?php
     $servername = "localhost";
     $username = "root";
-    $password = "";
-    $dbname = "chats";
+    $password = "030899jm";
+    $dbname = "jugarte18";
 
     $conn = new mysqli($servername, $username, $password, $dbname);
     $sql = "SELECT * FROM messages;";

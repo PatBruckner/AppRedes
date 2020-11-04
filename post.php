@@ -10,6 +10,11 @@
     $id_user = $_GET['id_user'];
     $text_message = $_GET['text_message'];
 
-    $sql = "INSERT INTO messages (id_message, id_user, text_message) VALUES ($id_message, $id_user, $text_message)";
-    $result = $conn->query($sql);
+    if (isset($_GET['id_message']) && isset($_SESSION['id_user']) && isset($_SESSION['text_message'])) {
+        $sql = "INSERT INTO messages (id_message, id_user, text_message) VALUES ($id_message, $id_user, $text_message)";
+        $result = $conn->query($sql);
+    } else {
+        echo 'Error';
+    }
+    
 ?>

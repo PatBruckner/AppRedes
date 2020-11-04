@@ -3,6 +3,11 @@
     $username = "jugarte18";
     $password = "030899jm";
     $dbname = "jugarte18";
+/*
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "chats";*/
 
     $conn = new mysqli($servername, $username, $password, $dbname);
     $sql = "SELECT * FROM messages;";

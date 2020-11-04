@@ -14,7 +14,7 @@
     $id_user = $_GET['id_user'];
     $text_message = $_GET['text_message'];
 
-    if ($_GET['id_message']) && isset($_GET['id_user']) && isset($_GET['text_message'])) {
+    if (isset($_GET['id_user']) && isset($_GET['text_message'])) {
         $sql = "INSERT INTO messages (id_user, text_message) VALUES (".$id_user."', '".$text_message."')";
         $result = $conn->query($sql);
     } else {
